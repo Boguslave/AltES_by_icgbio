@@ -10,7 +10,7 @@ Obtain STAR genome index for genome by either of the following two ways
 
 Download and unpacking AltES
 
-# Preprocessing data
+# Preprocessing data:
 
 Download pre-built STAR indexes if using Human (hg38, hg19) or Mouse (mm10).
 
@@ -30,7 +30,7 @@ output.txt              Directory and name of output text file
 
 delta                   Float number for accuracy (pvalue). Default expected 0.000001
 
-# How this tool working
+# How this tool working:
 Первый шаг обработки заключается в преобразовании данных RNA-seq в данные величины экспрессии каждого экзона с помощью пакета rMATs. Подробности по этому шагу можно найти в приложении 1. 
 
 Далее, по данным rMATS для каждого гена компилируем матрицу экспрессии АС экзонов A (рис. 1) размерности    , где m – количество образцов (60), а n – количество АС экзонов, содержащую данные об экспрессии событий пропуска и вставки экзонов в каждом конкретном образце. 
