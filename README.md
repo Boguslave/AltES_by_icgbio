@@ -18,38 +18,19 @@ delta                   Float number for accuracy (pvalue). Default expected 0.0
 # How this tool working
 Первый шаг обработки заключается в преобразовании данных RNA-seq в данные величины экспрессии каждого экзона с помощью пакета rMATs. Подробности по этому шагу можно найти в приложении 1. 
 Далее, по данным rMATS для каждого гена компилируем матрицу экспрессии АС экзонов A (рис. 1) размерности    , где m – количество образцов (60), а n – количество АС экзонов, содержащую данные об экспрессии событий пропуска и вставки экзонов в каждом конкретном образце. 
-```html
-<h2>Example of code</h2>
 
-<pre>
-    <div class="container">
-        <div class="block two first">
-            <h2>Your title</h2>
-            <div class="wrap">
-            <img src="https://latex.codecogs.com/svg.latex?\Large&space;A = \begin{pmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{pmatrix}
-" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
-            </div>
-        </div>
-    </div>
-</pre>
-```
+<p align="center">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;A = \begin{pmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{pmatrix}
+">
+
 Также введем матрицу S, содержащую данные об экспрессии пропуска экзонов
-```html
-<h2>Example of code</h2>
 
-<pre>
-    <div class="container">
-        <div class="block two first">
-            <h2>Your title</h2>
-            <div class="wrap">
-            <img src="https://latex.codecogs.com/svg.latex?\Large&space;S = \begin{pmatrix}s_{11} & s_{12} & \cdots & s_{1n} \\ s_{21} & s_{22} & \cdots & s_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ s_{m1} & s_{m2} & \cdots & s_{mn} \end{pmatrix}
-" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
-            </div>
-        </div>
-    </div>
-</pre>
-```
+<p align="center">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;S = \begin{pmatrix}s_{11} & s_{12} & \cdots & s_{1n} \\ s_{21} & s_{22} & \cdots & s_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ s_{m1} & s_{m2} & \cdots & s_{mn} \end{pmatrix}
+">
+
 Каждая строка соответствует АС экзону, каждый столбец - эксперименту. В столбцах расположены частоты (число) пропусков экзонов в каждом эксперименте.
+После производится подсчет суммарной экспрессии включения и исключения по каждому образцу и производится фильтрация случаев, в которых некорректные результаты выдает метрика корреляции
 Для каждой пары подсчитывается усредненная по весу корреляция Спирмена между строками включения и пропуска экзонов, предназначенная для поиска нелинейных зависимостей между переменными, представленных целыми числами.
 
 Формат выдачи AltES
