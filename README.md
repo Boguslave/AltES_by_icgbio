@@ -24,11 +24,11 @@ Run rMATs for STAR indixes (https://rmats.sourceforge.io/user_guide.htm)
 ```
 python altes.py rmats.txt output.txt delta
 ```
-rmats.txt 	            Directory and name of rMATs output file (expected SE.MATS.JC.txt)
+rmats.txt&nbsp;&nbsp;&nbsp;&nbsp; 	            Directory and name of rMATs output file (expected SE.MATS.JC.txt)
 
-output.txt              Directory and name of output text file
+output.txt&nbsp;&nbsp;&nbsp;&nbsp;              Directory and name of output text file
 
-delta                   Float number for accuracy (pvalue). Default expected 0.000001
+delta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                   Float number for accuracy (pvalue). Default expected 0.000001
 
 # How this tool working:
 Первый шаг обработки заключается в преобразовании данных RNA-seq в данные величины экспрессии каждого экзона с помощью пакета rMATs. Подробности по этому шагу можно найти в приложении 1. 
