@@ -22,12 +22,14 @@ delta                   Float number for accuracy (pvalue). Default expected 0.0
 <p align="center">
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;A = \begin{pmatrix}a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{pmatrix}
 ">
+</p>
 
 Также введем матрицу S, содержащую данные об экспрессии пропуска экзонов
 
 <p align="center">
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;S = \begin{pmatrix}s_{11} & s_{12} & \cdots & s_{1n} \\ s_{21} & s_{22} & \cdots & s_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ s_{m1} & s_{m2} & \cdots & s_{mn} \end{pmatrix}
 ">
+</p>
 
 Каждая строка соответствует АС экзону, каждый столбец - эксперименту. В столбцах расположены частоты (число) пропусков экзонов в каждом эксперименте.
 После производится подсчет суммарной экспрессии включения и исключения по каждому образцу и производится фильтрация случаев, в которых некорректные результаты выдает метрика корреляции
